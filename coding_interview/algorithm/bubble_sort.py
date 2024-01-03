@@ -1,8 +1,8 @@
 from typing import List
 
-def merge(nums1: List[int], nums2: List[int]) -> List[int]:
+def bubble_sort(nums: List[int]) -> List[int]:
     """
-    Merge two unsorted lists into one sorted list.
+    Sort a list using the bubble sort algorithm.
     """
     pass
 
