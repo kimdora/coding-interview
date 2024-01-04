@@ -28,6 +28,24 @@ class LinkedList:
             cur.next = new_node
         self.num_of_nodes += 1
 
+    def delete_first(self):
+        if self.head == None:
+            print("노드 없음")
+        else:
+            next = self.head.next
+            self.head = next
+
+    def delete_last(self):
+        if self.head == None:
+            print("노드 없음")
+        elif self.head.next == None:
+            self.head = None
+        else:
+            cur = self.head
+            while cur.next.next != None:
+                cur = cur.next
+            cur.next = None
+
     def print(self):
         cur = self.head
         while cur != None:
@@ -42,6 +60,7 @@ if __name__ == '__main__':
     ll.insert_last(7)
     ll.insert_first(1)
     ll.insert_last(5)
+    ll.delete_first()
+    ll.delete_last()
     ll.print()
-    
 
