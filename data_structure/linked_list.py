@@ -22,11 +22,19 @@ class LinkedList:
         if self.head == None:
             self.head = new_node
         else:
-            cur = Node(data, None)
+            cur = self.head
             while cur.next != None:
                 cur = cur.next
             cur.next = new_node
         self.num_of_nodes += 1
+
+    def print(self):
+        cur = self.head
+        while cur != None:
+            print(cur.data, end = "")
+            print("->", end = "")
+            cur = cur.next
+        print()
 
 if __name__ == '__main__':
     ll = LinkedList()
@@ -34,6 +42,6 @@ if __name__ == '__main__':
     ll.insert_last(7)
     ll.insert_first(1)
     ll.insert_last(5)
-    
+    ll.print()
     
 
